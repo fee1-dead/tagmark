@@ -1,18 +1,15 @@
 {
-    "name" : "{{project-name}}",
+    "name" : "tagmark",
     "version" : "1.0",
-    "description" : "{{project-name}}",
-    "permissions": [],
-    "content_scripts": [
-        {
-            "matches": ["*://*.example.com/*"],
-            "js": [
-                "{{crate_name}}.js", "run_wasm.js"
-            ]
-        }
-    ],
+    "description" : "Bookmark manager with tags",
+    "permissions": ["tabs"],
+    "content_scripts": [],
     "web_accessible_resources": [
-        "{{crate_name}}_bg.wasm"
+        "tagmark_bg.wasm"
     ],
+    "browser_action": {
+        "default_title": "Tagmark",
+        "default_popup": "popup/index.html"
+    },
     "manifest_version": 2
 }
